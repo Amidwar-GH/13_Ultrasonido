@@ -25,6 +25,7 @@ while True:
     if ultrasonic_sensor.distance() <= 200:
         motor_b.stop()
         motor_c.stop()
+        ev3.speaker.play_file(SoundFile.LASER)
         motor_b.run(300)
         wait(2000)
 
